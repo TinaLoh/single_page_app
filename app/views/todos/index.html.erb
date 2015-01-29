@@ -1,0 +1,13 @@
+<h2>Add New Todo</h2>
+
+
+<%= form_for(@todo) do |f| %>
+<%= f.text_field :content %>
+<%= f.submit %>
+<% end%>
+
+<ul>
+<% @todos.each do |todo| %>
+<li data-id='<%=todo.id%>'><%= todo.content %> <span>X</span></li>
+<% end %>
+</ul>
